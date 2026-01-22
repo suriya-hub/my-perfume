@@ -1,0 +1,65 @@
+/* 1. Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+/* 3. Custom Utilities */
+
+/* Inter font utility */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Gradient text utility (can reuse) */
+.text-gradient-green {
+  background: linear-gradient(90deg, rgba(3, 46, 21, 1) 0%, rgba(1, 102, 48, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Optional: custom text size/line-height tracking if needed */
+.text-30px {
+  font-size: 30px;
+}
+
+.leading-150 {
+  line-height: 150%;
+}
+
+.tracking-0 {
+  letter-spacing: 0;
+}
+
+/* style.css */
+.gradient-text {
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shop-now {
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+}
+
+.award-text {
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+}
+
+.number-text {
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.most-popular {
+  background: linear-gradient(270deg, #032E15 0%, #008236 51.92%, #00C950 100%);
+}
+
+.radio-btn {
+background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+}
