@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const radioC = C.querySelector('input[type="radio"]');
   const radioD = D.querySelector('input[type="radio"]');
 
+  const options = document.querySelectorAll(".fragrance-option");
+  const selectedImage = document.getElementById("selectedImage");
+
+  const container = document.getElementById("C");
+  const cards = container.querySelectorAll(".fragrance-card");
+
   function updateImage(index) {
     currentIndex = index;
     mainImage.src = images[index];
@@ -90,6 +96,43 @@ document.addEventListener('DOMContentLoaded', () => {
     B.style.display = "block";
     radioA.checked = true;
     radioB.checked = false;
+  });
+  //-------------Fragrance-------------
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+      const newImage = option.getAttribute("data-image");
+      selectedImage.src = newImage;
+    });
+  });
+
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+      const newImage = option.dataset.image;
+      selectedImage.src = newImage;
+      const radio = option.querySelector(".variant-radio");
+      if (radio) {
+        radio.checked = true;
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const radio = card.querySelector('input[type="radio"]');
+      if (radio) {
+        radio.checked = true;
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const groupName = card.querySelector('input[type="radio"]').name;
+      container
+        .querySelectorAll(`input[name="${groupName}"]`)
+        .forEach(r => r.closest(".fragrance-card")?.classList.remove("selected"));
+      card.classList.add("selected");
+    });
   });
 
   //----------Accordion--------------

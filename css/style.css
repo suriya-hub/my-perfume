@@ -46,6 +46,14 @@
   background: linear-gradient(180deg, #032E15 0%, #016630 100%);
 }
 
+.shop-now:hover {
+  background: linear-gradient(180deg, #016630 100%, #032E15 0%);
+}
+
+.no-hover {
+  pointer-events: none;
+}
+
 .award-text {
   background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
 }
@@ -61,5 +69,5 @@
 }
 
 .radio-btn {
-background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
 }
