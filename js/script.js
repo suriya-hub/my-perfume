@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   thumbs.forEach(thumb => {
-    console.log(thumb, 'thumb', thumb.dataset.index)
     thumb.addEventListener("click", () => {
       updateImage(Number(thumb.dataset.index));
     });
